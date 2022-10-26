@@ -1,0 +1,15 @@
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.csproj.AssemblyReference.cache
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.AssemblyInfoInputs.cache
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.AssemblyInfo.cs
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.csproj.CoreCompileInputs.cache
+C:\Users\sergi\source\repos\CodeStar\CodeStar\bin\Debug\net6.0\CodeStar.exe
+C:\Users\sergi\source\repos\CodeStar\CodeStar\bin\Debug\net6.0\CodeStar.deps.json
+C:\Users\sergi\source\repos\CodeStar\CodeStar\bin\Debug\net6.0\CodeStar.runtimeconfig.json
+C:\Users\sergi\source\repos\CodeStar\CodeStar\bin\Debug\net6.0\CodeStar.dll
+C:\Users\sergi\source\repos\CodeStar\CodeStar\bin\Debug\net6.0\CodeStar.pdb
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.dll
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\refint\CodeStar.dll
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.pdb
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\CodeStar.genruntimeconfig.cache
+C:\Users\sergi\source\repos\CodeStar\CodeStar\obj\Debug\net6.0\ref\CodeStar.dll
