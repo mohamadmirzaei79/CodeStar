@@ -9,16 +9,16 @@ namespace CodeStar
 {
     internal static class AddExistingWordInDictionary
     {
-        public static Dictionary<string, Dictionary<int, List<int>>> addExistingWordInDictionary (Dictionary<string, Dictionary<int, List<int>>> dictionary, List<string> words, int fileNumber, int wordNumber)
+        public static Dictionary<string, Dictionary<int, List<int>>> addExistingWordInDictionary (Dictionary<string, Dictionary<int, List<int>>> dictionary, IndexParameter indexParameter, int fileNumber)
         {
-            if (IsDictionaryContainsFile.isDictionaryContainsFile(words, fileNumber, wordNumber, dictionary))
+            if (IsDictionaryContainsFile.isDictionaryContainsFile(indexParameter.words, fileNumber, indexParameter.wordNumber, dictionary))
             {
-                dictionary = AddWordToFileDictionary.addWordToFileDictionary(words, fileNumber, wordNumber, dictionary);
+                dictionary = AddWordToFileDictionary.addWordToFileDictionary(indexParameter.words, fileNumber, indexParameter.wordNumber, dictionary);
             }
             else
             {
                 AddNewWordInThisFileToDictionary addNewWordInThisFileToDictionary = new AddNewWordInThisFileToDictionary();
-                dictionary = addNewWordInThisFileToDictionary.addNewWordInThisFileToDictionary(dictionary, words, fileNumber, wordNumber);
+                dictionary = addNewWordInThisFileToDictionary.addNewWordInThisFileToDictionary(dictionary, indexParameter.words, fileNumber, indexParameter.wordNumber);
             }
             return dictionary;
         }
