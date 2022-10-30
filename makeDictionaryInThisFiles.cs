@@ -9,21 +9,18 @@ namespace CodeStar
 {
     internal static class MakeDictionaryInThisFiles
     {
-        public static Dictionary<string, Dictionary<int, List<int>>> makeDictionaryInThisFiles (Dictionary<string, Dictionary<int, List<int>>> dictionary,List<string> myfilename, int fileNumber, int wordNumber)
+        public static Dictionary<string, Dictionary<int, List<int>>> makeDictionaryInThisFiles(FileParameters fileParameters, Dictionary<string, Dictionary<int, List<int>>> dictionary)
         {
-            for (fileNumber = 0; fileNumber < 2; fileNumber++)
+            for (fileParameters.fileNumber = 0; fileParameters.fileNumber < 2; fileParameters.fileNumber++)
             {
-                Cursor cursor = new Cursor();
-                Words words = new Words();
-                CharNumber charNumber = new CharNumber();
-                Cursor1 cursor1 = new Cursor1();
-                cursor.cursor = MakeListOfWordsBeginningInThisFile.makeListOfWordsBeginningInThisFile(fileNumber, charNumber.charNumber, cursor1.cursor1, cursor.cursor, myfilename);
-                words.words = IndexAllWordsInThisFile.indexAllWordsInThisFile(myfilename, words.words, cursor.cursor, charNumber.charNumber, fileNumber);
-                for (int j = 0; IsCounterLessThan.isCounterLesserThan(j, words.words.Count); j++)
+                IndexParameter indexParameter = new IndexParameter();   
+                indexParameter.cursor = MakeListOfWordsBeginningInThisFile.makeListOfWordsBeginningInThisFile(indexParameter,fileParameters);
+                indexParameter.words = IndexAllWordsInThisFile.indexAllWordsInThisFile(indexParameter,fileParameters);
+                for (int j = 0; IsCounterLessThan.isCounterLesserThan(j, indexParameter.words.Count); j++)
                 {
-                    words.words[j] = TrimThisWordAndPrint.trimThisWordAndPrint(words.words[j]);
+                    indexParameter.words[j] = TrimThisWordAndPrint.trimThisWordAndPrint(indexParameter.words[j]);
                 }
-                dictionary = AddAllWordsInThisFileToIndexDictionary.addAllWordsInThisFileToIndexDictionary(dictionary, words.words, fileNumber, wordNumber);
+                dictionary = AddAllWordsInThisFileToIndexDictionary.addAllWordsInThisFileToIndexDictionary(dictionary, indexParameter, fileParameters.fileNumber);
             }
             return dictionary; 
         }

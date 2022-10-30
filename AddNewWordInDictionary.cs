@@ -8,11 +8,10 @@ namespace CodeStar
 {
     internal static class AddNewWordInDictionary
     {
-        public static Dictionary<string, Dictionary<int, List<int>>> addNewWordInDictionary(Dictionary<string, Dictionary<int, List<int>>> dictionary, List<string> words, int fileNumber, int wordNumber)
+        public static Dictionary<string, Dictionary<int, List<int>>> addNewWordInDictionary(Dictionary<string, Dictionary<int, List<int>>> dictionary, int fileNumber,IndexParameter indexParameter)
         {
-            Dictionary<int, List<int>> tempdictionary = new Dictionary<int, List<int>>();
-            List<int> templist = new List<int>();
-            dictionary = AddNewWordAndNewFileToDictionary.addNewWordAndNewFileToDictionary(dictionary, words, fileNumber, wordNumber, tempdictionary, templist);
+            
+            dictionary = AddNewWordAndNewFileToDictionary.addNewWordAndNewFileToDictionary(dictionary, fileNumber, indexParameter);
             return dictionary;
         }
     }

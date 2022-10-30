@@ -8,9 +8,9 @@ namespace CodeStar
 {
     internal static class IsCharBeforeLastSpace
     {
-        public static bool isCharBeforeLastSpace(int cursor1, int fileNumber, List<string> myfilename)
+        public static bool isCharBeforeLastSpace(int cursor1, FileParameters fileParameters)
         {
-            if (cursor1 < myfilename[fileNumber].LastIndexOf(" ")) return true;
+            if (cursor1 < fileParameters.myfilename[fileParameters.fileNumber].LastIndexOf(" ")) return true;
             else return false;
         }
     }

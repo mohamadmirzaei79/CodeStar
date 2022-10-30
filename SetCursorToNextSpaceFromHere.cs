@@ -8,9 +8,9 @@ namespace CodeStar
 {
     internal static class SetCursorToNextSpaceFromHere
     {
-        public static int setCursorToNextSpaceFromHere(int cursor1, int u, List<string> myfilename)
+        public static int setCursorToNextSpaceFromHere(int cursor1,FileParameters fileParameters)
         {
-            cursor1 = myfilename[u].IndexOf(" ", cursor1 + 1);
+            cursor1 = fileParameters.myfilename[fileParameters.fileNumber].IndexOf(" ", cursor1 + 1);
             return cursor1;
         }
     }

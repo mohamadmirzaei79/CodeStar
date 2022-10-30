@@ -8,9 +8,9 @@ namespace CodeStar
 {
     internal static class SetCursorToFirstSpaceOfFile
     {
-        public static int setCursorToFirstSpaceOfFile(int cursor1, int fileNumber, List<string> myfilename)
+        public static int setCursorToFirstSpaceOfFile(int cursor1, FileParameters fileParameters)
         {
-            cursor1 = myfilename[fileNumber].IndexOf(" ");
+            cursor1 = fileParameters.myfilename[fileParameters.fileNumber].IndexOf(" ");
             return cursor1;
 
         }

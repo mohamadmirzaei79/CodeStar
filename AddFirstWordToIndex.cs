@@ -8,10 +8,10 @@ namespace CodeStar
 {
     internal static class AddFirstWordToIndex
     {
-        public static List<string> addFirstWordToIndex(List<string> words, int fileNumber, int charNumber, List<int> cursor, List<string> myfilename)
+        public static List<string> addFirstWordToIndex(IndexParameter indexParameters,FileParameters fileParameters)
         {
-            words.Add(myfilename[fileNumber].Substring(0, cursor[charNumber]));
-            return words;
+            indexParameters.words.Add(fileParameters.myfilename[fileParameters.fileNumber].Substring(0, indexParameters.cursor[indexParameters.charNumber]));
+            return indexParameters.words;
         }
     }
 }

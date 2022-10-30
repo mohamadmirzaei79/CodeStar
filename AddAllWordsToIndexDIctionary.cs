@@ -9,12 +9,12 @@ namespace CodeStar
 {
     internal static class AddAllWordsInThisFileToIndexDictionary
     {
-        public static Dictionary<string, Dictionary<int, List<int>>> addAllWordsInThisFileToIndexDictionary(Dictionary<string, Dictionary<int, List<int>>> dictionary, List<string> words, int fileNumber, int wordNumber)
+        public static Dictionary<string, Dictionary<int, List<int>>> addAllWordsInThisFileToIndexDictionary(Dictionary<string, Dictionary<int, List<int>>> dictionary,IndexParameter indexParameter, int fileNumber)
         {
-            for (wordNumber = 0; IsCounterLessThan.isCounterLesserThan(wordNumber, words.Count); wordNumber++)
+            for (indexParameter.wordNumber = 0; IsCounterLessThan.isCounterLesserThan(indexParameter.wordNumber, indexParameter.words.Count); indexParameter.wordNumber++)
             {
-                if (dictionary.ContainsKey(words[wordNumber])) AddExistingWordInDictionary.addExistingWordInDictionary(dictionary, words, fileNumber, wordNumber);
-                else AddNewWordInDictionary.addNewWordInDictionary(dictionary, words, fileNumber, wordNumber);
+                if (dictionary.ContainsKey(indexParameter.words[indexParameter.wordNumber])) AddExistingWordInDictionary.addExistingWordInDictionary(dictionary, indexParameter.words, fileNumber, indexParameter.wordNumber);
+                else AddNewWordInDictionary.addNewWordInDictionary(dictionary, fileNumber, indexParameter );
             }
             return dictionary;
         }

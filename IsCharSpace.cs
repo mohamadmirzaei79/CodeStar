@@ -8,9 +8,9 @@ namespace CodeStar
 {
     internal static class IsCharSpace
     {
-        public static bool isCharSpace(int fileNumber, int cursor1, List<string> myfilename)
+        public static bool isCharSpace(int cursor1, FileParameters fileParameters)
         {
-            return myfilename[fileNumber][cursor1 + 1] == ' ';
+            return fileParameters.myfilename[fileParameters.fileNumber][cursor1 + 1] == ' ';
         }
     }
 }

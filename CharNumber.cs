@@ -6,8 +6,5 @@ using System.Threading.Tasks;
 
 namespace CodeStar
 {
-    internal class CharNumber
-    {
-        public int charNumber { get; set; }
-    }
+    
 }

@@ -8,21 +8,21 @@ namespace CodeStar
 {
     internal static class MakeListOfWordsBeginningInThisFile
     {
-        public static List<int> makeListOfWordsBeginningInThisFile(int fileNumber, int charNumber, int cursor1, List<int> cursor, List<string> myfilename)
+        public static List<int> makeListOfWordsBeginningInThisFile(IndexParameter indexParameters,FileParameters fileParameters)
         {
-            for (charNumber = 0; IsCharBeforeLastSpace.isCharBeforeLastSpace(cursor1, fileNumber, myfilename);)
+            for (indexParameters.charNumber = 0; IsCharBeforeLastSpace.isCharBeforeLastSpace(indexParameters.cursor1,fileParameters);)
             {
-                if (IsCharSpace.isCharSpace(fileNumber, cursor1, myfilename))
+                if (IsCharSpace.isCharSpace(indexParameters.cursor1, fileParameters))
                 {
-                    cursor1++;
+                    indexParameters.cursor1++;
                     continue;
                 }
-                if (IsCharFirstOfDocument.isCharFirstOfDocument(charNumber)) cursor1 = SetCursorToFirstSpaceOfFile.setCursorToFirstSpaceOfFile(cursor1, fileNumber, myfilename);
-                else cursor1 = SetCursorToNextSpaceFromHere.setCursorToNextSpaceFromHere(cursor1, fileNumber, myfilename);
-                cursor.Add(cursor1);
-                charNumber++;
+                if (IsCharFirstOfDocument.isCharFirstOfDocument(indexParameters.charNumber)) indexParameters.cursor1 = SetCursorToFirstSpaceOfFile.setCursorToFirstSpaceOfFile(indexParameters.cursor1, fileParameters);
+                else indexParameters.cursor1 = SetCursorToNextSpaceFromHere.setCursorToNextSpaceFromHere(indexParameters.cursor1,fileParameters);
+                indexParameters.cursor.Add(indexParameters.cursor1);
+                indexParameters.charNumber++;
             }
-            return cursor;
+            return indexParameters.cursor;
         }
     }
 }

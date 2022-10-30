@@ -9,11 +9,9 @@ namespace CodeStar
 {
     internal static class AddNewWordAndNewFileToDictionary
     {
-        public static Dictionary<string, Dictionary<int, List<int>>> addNewWordAndNewFileToDictionary (Dictionary<string, Dictionary<int, List<int>>> dictionary, List<string> words, int fileNumber, int wordNumber, Dictionary<int, List<int>> tempdictionary,List<int> templist)
+        public static Dictionary<string, Dictionary<int, List<int>>> addNewWordAndNewFileToDictionary (Dictionary<string, Dictionary<int, List<int>>> dictionary, int fileNumber, IndexParameter indexParameter)
         {
-            templist.Add(wordNumber);
-            tempdictionary.Add(fileNumber, templist);
-            dictionary.Add(words[wordNumber], tempdictionary);
+            dictionary.Add(indexParameter.words[indexParameter.wordNumber], new Dictionary<int, List<int>> { [fileNumber] = new List<int> { { indexParameter.wordNumber} } });
             return dictionary;
         }
     }

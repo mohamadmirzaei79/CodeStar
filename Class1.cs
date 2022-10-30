@@ -21,17 +21,15 @@ namespace CodeStar
     }
     public class Indexing
     {
-        public List<String> myfilename { get; set; } = new List<string>();
+        
         public Dictionary<string, Dictionary<int , List<int>>> dictionary { get; set; } = new Dictionary<string, Dictionary<int, List<int>>>();
 
-        
+        FileParameters fileParameters = new FileParameters();
         
         public void Index ()
         {
-            GetFile.getFile(myfilename);
-            FileNumber fileNumber = new FileNumber();
-            WordNumber wordNumber = new WordNumber();
-            dictionary = MakeDictionaryInThisFiles.makeDictionaryInThisFiles(dictionary, myfilename, fileNumber.fileNumber, wordNumber.wordNumber);
+            GetFile.getFile(fileParameters.myfilename);
+            dictionary = MakeDictionaryInThisFiles.makeDictionaryInThisFiles(fileParameters, dictionary);
             Search.search(dictionary);
         }
         

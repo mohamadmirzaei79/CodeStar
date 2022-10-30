@@ -8,15 +8,15 @@ namespace CodeStar
 {
     internal static class IndexAllWordsInThisFile
     {
-        public static List<string> indexAllWordsInThisFile (List<string> myfilename,List<string> words,List<int> cursor,int charNumber,int fileNumber)
+        public static List<string> indexAllWordsInThisFile (IndexParameter indexParameters, FileParameters fileParameters)
         {
-            for (charNumber = 0; ; charNumber++)
+            for (indexParameters.charNumber = 0; ; indexParameters.charNumber++)
             {
-                if (IsCharNumberZero.isCharNumberZero(charNumber)) words = AddFirstWordToIndex.addFirstWordToIndex(words, fileNumber, charNumber, cursor, myfilename);
-                else words = AddNextWordToIndex.addNextWordToIndex(words, fileNumber, charNumber, cursor, myfilename);
-                if (cursor[charNumber] == myfilename[fileNumber].LastIndexOf(" ")) break;
+                if (IsCharNumberZero.isCharNumberZero(indexParameters.charNumber)) indexParameters.words = AddFirstWordToIndex.addFirstWordToIndex(indexParameters,fileParameters);
+                else indexParameters.words = AddNextWordToIndex.addNextWordToIndex(indexParameters,fileParameters);
+                if (indexParameters.cursor[indexParameters.charNumber] == fileParameters.myfilename[fileParameters.fileNumber].LastIndexOf(" ")) break;
             }
-            return words;   
+            return indexParameters.words;   
         }
     }
 }

@@ -8,10 +8,10 @@ namespace CodeStar
 {
     internal static class AddNextWordToIndex
     {
-        public static List<string> addNextWordToIndex(List<string> words, int fileNumber, int charNumber, List<int> cursor, List<string> myfilename)
+        public static List<string> addNextWordToIndex(IndexParameter indexParameters,FileParameters fileParameters)
         {
-            words.Add(myfilename[fileNumber].Substring(cursor[charNumber - 1] + 1, cursor[charNumber] - cursor[charNumber - 1])); ;
-            return words;
+            indexParameters.words.Add(fileParameters.myfilename[fileParameters.fileNumber].Substring(indexParameters.cursor[indexParameters.charNumber - 1] + 1, indexParameters.cursor[indexParameters.charNumber] - indexParameters.cursor[indexParameters.charNumber - 1])); ;
+            return indexParameters.words;
         }
     }
 }

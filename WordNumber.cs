@@ -6,8 +6,5 @@ using System.Threading.Tasks;
 
 namespace CodeStar
 {
-    internal class WordNumber
-    {
-        public int wordNumber { get; set; }
-    }
+    
 }
